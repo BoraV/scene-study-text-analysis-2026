@@ -1,6 +1,4 @@
-# scene-study-text-analysis-2026
-
-# Final Project Plan
+# scene-study-text-analysis-2026 / Final Project Plan
 
 ## 1. Project Description
 

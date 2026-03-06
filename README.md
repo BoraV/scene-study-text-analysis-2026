@@ -6,16 +6,14 @@ This project intends to develop a Jupyter notebook that implements a data analys
 
 The analysis will focus on organizing, cleaning, and processing the collected text response. After cleaning the data, the project will investigate word usage/occurrence patterns and perform topic modeling to extract several domains around which the words cluster.
 
-## 2. Code composition
+## 2. Functions
 
-I intend to create one or multiple functions for each of the following steps. 
+### a. clean_data
+a will include lowercasing, punctuation removal, trailing whitespace, and grammar check. 
 
-### a. cleaning the data
-Step 1 will include lowercasing, punctuation removal, trailing whitespace, and grammar check. 
-
-### b. computing word frequency
-Step 2 will include splitting the string into words and creating an output of a word frequency table, which lists all words from the highest to lowest frequency.
+### b. compute_word_frequency
+b will include splitting the string into words and creating an output of a word frequency table, which lists all words from the highest to lowest frequency.
 The words with high frequency but are meaningless analysis-wise, such as "scene" or "environment," may be removed at this stage. 
 
-### c. topic modeling
-Step 3 will identify where words cluster based on their occurrence, relevance in meaning, etc. The exact method (e.g., SBERT, LDA) will be determined soon, but the goal is to detect patterns in how participants describe scenes.
+### c. perform_topic_modeling
+c will identify where words cluster based on their occurrence, relevance in meaning, etc. The exact method (e.g., SBERT, LDA) will be determined soon, but the goal is to detect patterns in how participants describe scenes. I may create multiple functions for the topic modeling.

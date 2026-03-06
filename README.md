@@ -10,7 +10,7 @@ The analysis will focus on organizing, cleaning, and processing the collected te
 
 I intend to create one or multiple functions for each of the following steps. 
 
-### a. cleaning the dataㅊ
+### a. cleaning the data
 Step 1 will include lowercasing, punctuation removal, trailing whitespace, and grammar check. 
 
 ### b. computing word frequency

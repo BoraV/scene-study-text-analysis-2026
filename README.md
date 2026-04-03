@@ -1,24 +1,23 @@
-# scene-study-text-analysis-2026 / Final Project Plan
+# scene-study-text-analysis-2026 / Final Project Check-in #2
 
-## Project Description
-This project intends to develop a Jupyter notebook that implements a data analysis pipeline for a scene perception study. In the experiment, participants will view outdoor scene images from the SUN397 dataset and provide six spontaneous text impressions for each image/trial. The goal of the Jupyter notebook is to analyze this written response to identify what type of conceptual domains people use when perceiving scenes.
+## Updated Abstract
+Humans rapidly extract meaning from visual scenes. Understanding the scene perception mechanism is critical, as it plays a central role in everyday cognition, guiding navigation, memory, and decision-making in complex surroundings. Yet, relatively little is known about the domains people rely on when spontaneously perceiving and evaluating them. The present study investigates the impressions individuals form when viewing naturalistic outdoor environments, examining whether patterns in free-response language can reveal underlying perceptual domains. Rather than relying on predefined rating scales, this project adopts a data-driven approach using open-ended linguistic responses. 
+Participants will view images of outdoor scenes presented one at a time and provide six impressions per image. Instead of relying on unsupervised dimensionality reduction techniques, the present study plans to apply a dictionary-based computational analysis framework adapted from recent work on spontaneous impression formation in face perception (Nicolas et al., 2025). Participants’ responses will be mapped onto a high-dimensional taxonomy of semantic content (e.g., affect, environmental features), enabling the quantification of (1) coverage (how much of the data is explained), (2) prevalence (how frequently each domain occurs), and (3) direction (positive vs. negative evaluation where applicable). This analysis approach preserves interpretability while capturing the richness of natural language responses. 
+More broadly, this project will contribute to research on visual perception and scene understanding by demonstrating how free-response language can reveal the conceptual structures that support mental representations of scenes. By characterizing these representations, this study aims to provide insight into how people interpret and interact with complex visual environments.
 
-The analysis will focus on organizing, cleaning, and processing the collected text response. After cleaning the data, the project will investigate word usage/occurrence patterns and perform topic modeling to extract several domains around which the words cluster.
+_Keywords: scene perception; scene evaluation; visual perception; natural language processing; scene understanding_
 
-## Functions
-### a. clean_data
-a will include lowercasing, punctuation removal, trailing whitespace, and grammar check. 
+## Project logic & motivation 
+This project aims to understand which conceptual domains people spontaneously rely on when perceiving visual scenes, addressing a gap in prior research that has focused mainly on predefined categories in scene perception/categorization. By analyzing free-response language, this study intends to implement a data-driven approach to understand the underlying structure of scene perception and mental representations.
 
-### b. compute_word_frequency
-b will include splitting the string into words and creating an output of a word frequency table, which lists all words from the highest to lowest frequency.
-The words with high frequency but are meaningless analysis-wise, such as "scene" or "environment," may be removed at this stage. 
+## Input data format or requirements
+The input data consists of written responses from participants. The participants will be asked to spontaneously generate six short text impressions for each presented scene image, and their entries will be structured in a CSV file with six respective columns, besides other columns that include other necessary information, such as participant ID, image ID, response time, etc. 
 
-### c. perform_topic_modeling
-c will identify where words cluster based on their occurrence, relevance in meaning, etc. The exact method (e.g., SBERT, LDA) will be determined soon, but the goal is to detect patterns in how participants describe scenes. I may create multiple functions for the topic modeling.
+## Example use cases
+The text analysis pipeline that I intend to create for the final project can be used to analyze other kinds of free-response data for data cleaning and topic modeling (i.e., identifying recurring semantic domains) purposes. We can extend the pipeline to visual perception experiments that investigate not only scenes but also other subjects.
 
-## Abstract
-Humans can rapidly make meaning of visual scenes. Yet, relatively little is known about the domains people rely on when spontaneously perceiving and evaluating scenes. The present study investigates the impressions individuals form when seeing naturalistic and artificial outdoor scenes to understand whether recurring linguistic patterns reveal underlying perceptual criteria. Understanding these perceptual criteria is significant because scene perception plays a central role in everyday cognition, guiding navigation, memory, and decision-making in complex surroundings. Rather than relying on predefined rating scales, this project adopts a data-driven approach that captures participants’ own language during scene perception. Seventy adults, including forty college students**, were recruited from SONA and Prolific will view images of scenes presented one at a time and produce six spontaneous impressions for each image. The responses will be cleaned and analyzed using computational text-analysis techniques, including word-frequency analysis and topic modeling using Principal Component Analysis (PCA)**, to extract latent topics from participants’ answers. Natural language processing will focus on identifying where co-occurring words cluster in the semantic dimension, which will be interpreted as candidate domains guiding scene perception and evaluation. For example, clusters may reflect perceptual dimensions such as aesthetic qualities, environmental features, or emotional responses. By identifying the domains people rely on during scene perception, this study seeks to address what visual aspects we prioritize when evaluating scenes. More broadly, the project contributes to research on visual perception and scene understanding by demonstrating how free-response language can reveal the conceptual structures underlying mental representation of scenes. 
-
-Keywords: scene perception; scene evaluation; visual perception; natural language processing; scene understanding
-
-**Number of participants and PCA are placeholders.
+## Python Script Files & Test Plan
+Currently, this repository contains two main directories: 1) data/ folder, which stores raw and processed datasets in a .csv format and 2) src/ folder, which stores Python scripts for data analysis. 
+So far, src/ folder has a pipeline up to word frequency analysis. The clean_text.py preprocesses raw responses, including extracting text from dictionary-formatted entries, lowercasing, and removing punctuation. Then, the word_frequency.py takes over the cleaned data to compute word frequency using vectorization.
+In the next step, the scripts will be reorganized into a more structured project directory structure, and new scripts for analysis will be implemented. 
+Specifically, the pipeline will be extended to include a dictionary-based content analysis framework used in Nicholas, Uddenberg, and Todorov (2025), as I plan to refer to their R code recorded in [OSF](https://osf.io/pmtxw/overview?view_only=a485688056a8495ba37082f38c690833). After performing the word frequency analysis, the responses will be mapped onto a high-dimensional taxonomy of semantic content, which will allow the computation of key metrics such as coverage, prevalence, and direction, enabling the identification of recurring conceptual domains in scene perception.

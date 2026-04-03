@@ -26,3 +26,26 @@ So far, src/ folder has a pipeline up to word frequency analysis. The clean_text
 In the next step, the scripts will be reorganized into a more structured project directory structure, and new scripts for analysis will be implemented. 
 
 Specifically, the pipeline will be extended to include a dictionary-based content analysis framework used in Nicholas, Uddenberg, and Todorov (2025), as I plan to refer to their R code recorded in [OSF](https://osf.io/pmtxw/overview?view_only=a485688056a8495ba37082f38c690833). After performing the word frequency analysis, the responses will be mapped onto a high-dimensional taxonomy of semantic content, which will allow the computation of key metrics such as coverage, prevalence, and direction, enabling the identification of recurring conceptual domains in scene perception.
+
+## Implementation Plan
+The project is structured as an analysis pipeline:
+
+- Data loading (clean_text.py)  
+  - Load raw CSV data from the data/ folder  
+  - Extract text responses from dictionary-formatted entries  
+  - Status: completed  
+- Text preprocessing (clean_text.py)  
+  - Lowercasing, punctuation removal, whitespace trimming  
+  - Output: clean.csv  
+  - Status: completed  
+- Word frequency analysis (word_frequency.py)  
+  - Tokenization and vectorization using CountVectorizer  
+  - Output: word_frequency.csv  
+  - Status: completed  
+- Dictionary-based domain mapping (planned)  
+  - Map responses to semantic categories based on Nicolas et al. (2025)  
+  - Compute coverage, prevalence, and direction  
+  - Status: pending  
+- Pipeline integration (main.py, planned)  
+  - Combine all steps into a single executable workflow  
+  - Status: pending  

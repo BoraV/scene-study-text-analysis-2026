@@ -1,13 +1,14 @@
-# scene-study-text-analysis-2026 / Final Project Check-in #2
+# scene-study-text-analysis-2026 / Final Project Check-in #3
 
-## Updated Abstract
-Humans rapidly extract meaning from visual scenes. Understanding the scene perception mechanism is critical, as it plays a central role in everyday cognition, guiding navigation, memory, and decision-making in complex surroundings. Yet, relatively little is known about the domains people rely on when spontaneously perceiving and evaluating them. The present study investigates the impressions individuals form when viewing naturalistic outdoor environments, examining whether patterns in free-response language can reveal underlying perceptual domains. Rather than relying on predefined rating scales, this project adopts a data-driven approach using open-ended linguistic responses. 
-
-Participants will view images of outdoor scenes presented one at a time and provide six impressions per image. Instead of relying on unsupervised dimensionality reduction techniques, the present study plans to apply a dictionary-based computational analysis framework adapted from recent work on spontaneous impression formation in face perception (Nicolas et al., 2025). Participants’ responses will be mapped onto a high-dimensional taxonomy of semantic content (e.g., affect, environmental features), enabling the quantification of (1) coverage (how much of the data is explained), (2) prevalence (how frequently each domain occurs), and (3) direction (positive vs. negative evaluation where applicable). This analysis approach preserves interpretability while capturing the richness of natural language responses. 
-
-More broadly, this project will contribute to research on visual perception and scene understanding by demonstrating how free-response language can reveal the conceptual structures that support mental representations of scenes. By characterizing these representations, this study aims to provide insight into how people interpret and interact with complex visual environments.
+## Abstract
+When we look at a scene, we rapidly and automatically extract a wealth of information from it, including its “gist” writ large (e.g., categorizing the scene as a kitchen vs. a beach). However, while much work has been done to characterize how we recognize scenes, little has been done to understand how we evaluate scenes in terms of the impressions they evoke in us. The current study investigates the impressions people form when viewing photographs of outdoor environments, focusing on the words they naturally generate. By analyzing the text responses participants provide under unspeeded scene viewing, this study aims to uncover the key dimensions people use when evaluating scenes. One hundred adults, to be recruited from SONA and Prolific, will view 10 images (one at a time) and provide at least six short descriptions of characteristics that come to mind when viewing each image. Written responses will be analyzed by identifying recurring patterns in word use, such as co-occurrence. These patterns are expected to reveal the conceptual domains that underlie scene perception – for example, whether a place is perceived as safe (safety), pleasant (valence), or visually appealing (aesthetics). By characterizing these representations, this study will contribute to our understanding of how people interpret and interact with complex visual environments. More broadly, it will demonstrate how analyzing free-response language can provide insight into the structure of human scene perception.
 
 _Keywords: scene perception; scene evaluation; visual perception; natural language processing; scene understanding_
+
+## How to run the analysis pipeline
+
+pip install -r requirements.txt
+
 
 ## Project logic & motivation 
 This project aims to understand which conceptual domains people spontaneously rely on when perceiving visual scenes, addressing a gap in prior research that has focused mainly on predefined categories in scene perception/categorization. By analyzing free-response language, this study intends to implement a data-driven approach to understand the underlying structure of scene perception and mental representations.

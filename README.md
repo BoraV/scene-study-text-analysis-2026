@@ -31,7 +31,10 @@ This project was developed using:
 ```
 pip install -r requirements.txt
 ```
-2. Open analysis.ipynb and run the notebook cells sequentially.
+2. Open analysis.ipynb
+3. Go to the Python environment
+   
+5. and run the notebook cells sequentially.
 - Helpful keys are:
     - command/ctrl + enter (run the current cell and stay at the current cell)
     - shift + enter (run the current cell and go to the next cell)

@@ -8,7 +8,8 @@ This text analysis was inspired by a dictionary-based content analysis framework
 This repository initially includes the following files. 
 - analysis.ipynb: is a data analysis script 
 - README.md: provides an overview of the repository
-- requirements.txt
+- requirements.txt: minimal required packages
+- requirements_full.txt: complete environment backup generated with `pip freeze`
 - data/: stores raw and processed datasets in a `.csv` format
     - main_data.csv: an example raw data
 
@@ -29,6 +30,10 @@ This project was developed using:
 1. Install the required dependencies
 ```
 pip install -r requirements.txt
+```
+If package conflicts or installation issues occur, try the full dependency list instead:
+```
+pip install -r requirements_full.txt
 ```
 2. Open `analysis.ipynb`
 3. Activate the appropriate Python environment
